@@ -91,8 +91,8 @@ func main() {
 	server.HandlerFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		//<-time.After(time.Second * 4)
 		fmt.Println(r.Header)
-		b, _ := os.ReadFile("resources/jamal.jpeg")
-		w.Header().Add("content-type", "image-jpeg")
+		b, _ := os.ReadFile("resources/flower.webp")
+		w.Header().Add("content-type", "image-webp")
 		w.WriteHeader(http.StatusOK)
 		_, err := w.Write(b)
 		if err != nil {
